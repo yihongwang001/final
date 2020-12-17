@@ -1,5 +1,10 @@
 import { Navbar, Nav, Form, Button } from "react-bootstrap";
 
+/* It might be better to have this file be the Main Navigation and create 
+separate component files for the NavLinks and NavBar and then import 
+them into this file
+*/
+
 function Navigation() {
 	return (
 		<Navbar bg="light" expand="rg">
