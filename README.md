@@ -9,8 +9,7 @@ The objective of this website was to create an express and Mongodb and backend w
 
 ![Image of Homepage](https://github.com/yihongwang001/final/blob/main/screenshot.png?raw=true)
 ### Credits:
-Photos:https://www.google.com/search?q=party&rlz=1C5CHFA_enUS840US840&sxsrf=ALeKk02X16wdwQ9aEAuUPo-jmXEIdRGJdw:1606183080977&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiKj_GfiprtAhVnw1kKHWfnDmYQ_AUoAXoECAYQAw&biw=1097&bih=950#imgrc=XOP92t3s3JehQM
-https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/birthday-party-for-cute-child-royalty-free-image-700712598-1552358033.jpg?crop=0.91455xw:1xh;center,top&resize=768:*
+Photos:https://www.google.com/search?q=apartment&sxsrf=ALeKk02wKhTF16HLWIUXBJP6ojNa6GDkkw:1608498360575&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjRkZ2ru93tAhWDZ80KHeXXD7gQ_AUoAnoECAQQBA&biw=1231&bih=778
 #### Instructions to build:
 1. Clone the repository
 1. Do ‘npm install’ separately in youtubeTutorial folder and client folder on command line
