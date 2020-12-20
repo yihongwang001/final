@@ -1,0 +1,25 @@
+#react-paginate ul {
+	display: inline-block;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+body {
+	background-color: #d3e8eb;
+	color: black;
+	padding: 40px;
+	font-family: Georgia;
+	text-align: center;
+}
+#react-paginate li {
+	display: inline-block;
+}
+
+.pagination-container {
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+	padding: 0;
+	margin: 25;
+	width: 100%;
+	justify-content: space-between;
+}
