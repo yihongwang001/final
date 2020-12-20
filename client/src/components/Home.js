@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import Page from "./Page.js";
-import Posts from "./Posts.js";
-import SearchBar from "./SearchBar.js";
-import SortBar from "./SortBar.js";
+import React, { useState, useEffect } from 'react';
+import Page from './Page.js';
+import Posts from './Posts.js';
+import Search from './Search.js';
+import Sorting from './Sorting.js';
 import './css/home.css';
 
 function Home() {
@@ -10,28 +10,28 @@ function Home() {
 	const [currentPage, setCurrentPage] = useState(1);
 	const postsPerPage = 6;
 
-	const [search, setSearch] = useState("");
-	const [searchBy, setSearchBy] = useState("neighborhood");
-	const [sortBy, setSortBy] = useState("price");
+	const [search, setSearch] = useState('');
+	const [searchBy, setSearchBy] = useState('neighborhood');
+	const [sortBy, setSortBy] = useState('price');
 
 	const processPosts = (_posts) => {
 		return _posts
 			.map((p) => {
 				p.images = p.images.map(function (img) {
-					img = img.replace("50x50c", "600x450");
+					img = img.replace('50x50c', '600x450');
 					return img;
 				});
 				return p;
 			})
 			.filter((p) => {
-				if (search === "") {
+				if (search === '') {
 					return true;
 				}
 				if (!p[searchBy]) {
 					return false;
 				}
 				return p[searchBy]
-					.replace(",", "")
+					.replace(',', '')
 					.toLowerCase()
 					.includes(search.toLowerCase());
 			})
@@ -41,12 +41,10 @@ function Home() {
 	useEffect(() => {
 		const getPosts = async () => {
 			try {
-				const _posts = await fetch("/api/posts").then((res) =>
-					res.json()
-				);
+				const _posts = await fetch('/api/posts').then((res) => res.json());
 				setPosts(_posts);
 			} catch (err) {
-				console.log("error ", err);
+				console.log('error ', err);
 			}
 		};
 
@@ -74,35 +72,32 @@ function Home() {
 	};
 
 	const processedPosts = processPosts(posts);
-	const currentPosts = processedPosts.slice(
-		indexOfFirstPost,
-		indexOfLastPost
-	);
+	const currentPosts = processedPosts.slice(indexOfFirstPost, indexOfLastPost);
 
 	return (
 		<div>
 			<br />
 			<h5>
-				Welcome to SweetHome! Click SweetHome will lead you to the home
-				page. Click New Houses will help you find the latest housing
-				information. You need to login to leave any comments. Hope you
-				can find your sweet home here.
+				Welcome to SweetHome! Click SweetHome will lead you to the home page.
+				Click New Houses will help you find the latest housing information. You
+				need to login to leave any comments. Hope you can find your sweet home
+				here.
 			</h5>
 			<br />
 			<div className="row">
 				<div className="col-8">
-					<SearchBar
+					<Search
 						handleSearchChange={handleSearchChange}
 						handleSearchByChange={handleSearchByChange}
 						searchBy={searchBy}
 						search={search}
-					></SearchBar>
+					></Search>
 				</div>
 				<div className="col-4">
-					<SortBar
+					<Sorting
 						handleSortByChange={handleSortByChange}
 						sortBy={sortBy}
-					></SortBar>
+					></Sorting>
 				</div>
 			</div>
 			<br />
