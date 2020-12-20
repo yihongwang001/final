@@ -1,0 +1,56 @@
+{
+  "name": "finalproject",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./bin/www",
+  "scripts": {
+    "start": "node ./node_modules/nodemon/bin/nodemon.js ./bin/www",
+    "serverstart": "npm start",
+    "heroku-postbuild": "cd frontend && npm install && npm run build"
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "body-parser": "^1.19.0",
+    "connect-mongo": "^3.2.0",
+    "connect-mongodb-session": "^2.4.1",
+    "cookie-parser": "~1.4.4",
+    "crypto": "^1.0.1",
+    "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
+    "express": "~4.16.1",
+    "express-session": "^1.17.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "mongodb": "^3.6.3",
+    "morgan": "~1.9.1",
+    "nodemon": "^2.0.6",
+    "passport": "^0.4.1",
+    "pug": "3.0.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.6.0",
+    "@typescript-eslint/parser": "^4.6.0",
+    "eslint": "^7.16.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-react": "^7.21.5",
+    "live-server": "^1.2.1",
+    "prettier": "^2.2.1",
+    "react-scripts": "^4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangyihong-yvonne/heroku.git"
+  },
+  "keywords": [],
+  "author": "Yihong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wangyihong-yvonne/heroku/issues"
+  },
+  "homepage": "https://github.com/wangyihong-yvonne/heroku.git",
+  "description": "This website was create by Yihong Wang for CS5610 Web Development at Northeastern (https://johnguerra.co/classes/webDevelopment_fall_2020/)",
+  "engines": {
+    "node": "v12.18.x"
+  }
+}
