@@ -5,8 +5,7 @@ require("dotenv").config();
 function PostsDB() {
   const postsDB = {};
 
-  const uri =
-    "mongodb+srv://webdev:pass123@cluster0.nmh7f.mongodb.net/<dbname>?retryWrites=true&w=majority";
+ const uri = process.env.MONGO_URL || "mongodb://localhost:27017";
   postsDB.getPosts = async () => {
     const client = new MongoClient(uri, { useUnifiedTopology: true });
     try {
