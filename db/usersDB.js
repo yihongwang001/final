@@ -3,9 +3,8 @@ require("dotenv").config();
 function UsersDB() {
   const usersDB = {};
 
-  const uri =
-    "mongodb+srv://webdev:pass123@cluster0.nmh7f.mongodb.net/<apt>?retryWrites=true&w=majority";
-  console.log("success", uri);
+const uri = process.env.MONGO_URL || "mongodb://localhost:27017";
+
 
   usersDB.getUsers = async () => {
     const client = new MongoClient(uri, { useUnifiedTopology: true });
