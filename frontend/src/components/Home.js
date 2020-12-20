@@ -3,6 +3,7 @@ import Page from "./Page.js";
 import Posts from "./Posts.js";
 import SearchBar from "./SearchBar.js";
 import SortBar from "./SortBar.js";
+import './css/home.css';
 
 function Home() {
 	const [posts, setPosts] = useState([]);
