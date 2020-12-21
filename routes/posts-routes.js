@@ -13,7 +13,7 @@ router.get("/", async (req, res, next) => {
 router.get("/:pid", async (req, res, next) => {
 	const postId = req.params.pid;
 	const post = await myDB.getPostById(postId);
-	console.log("await to get post from myDB", post);
+	console.log(post);
 	res.json(post);
 });
 
@@ -26,7 +26,7 @@ router.post("/post/:postId/comment", async (req, res) => {
 			req.user.username,
 			comment
 		);
-		console.log("Comment", returnedComment);
+		console.log("returnmyComment", returnedComment);
 
 		res.json(returnedComment);
 	} else {
